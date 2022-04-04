@@ -8,9 +8,10 @@
     border-radius: 4px;
 }
 body{
-    background-image: url(/imgs/books.jpg);
+    background-image: url("/imgs/books.jpg");
     background-repeat: no-repeat ;
     background-size: cover;
+    /*  notessssssssssssss */
     /* background-position: center; */
 }
 table{
