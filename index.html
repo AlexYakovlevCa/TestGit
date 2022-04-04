@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main/book-shop-page.css" />
+    <title>Amazon-1996</title>
+  </head>
+  <body onload="runInit()">
+    <h1 class="book-shop-">Welcome to my bookshop!</h1>
+    <section class="book-controler">
+      <form onsubmit="onCreateBtn(event)">
+        <button class="create-btn">Create new book</button>
+        <input placeholder="Book name?" type="text" name="book-name" />
+        <input placeholder="Book price?" type="number" name="book-price" />
+      </form>
+      <button class="page-up" onclick="pageUp(this)">&#x2191</button>
+      <span class="curr-page"></span>
+      <button class="page-down" onclick="pageDown(this)" >&#x2193</button>
+      <table class="books-view" ></table>
+    </section>
+    <section class="msg-modal">
+      <span class="modal-book-name"></span>
+      -- <span class="modal-book-price"></span> --
+      <span class="modal-book-id"></span>
+    </section>
+    <section class="read-modal">
+      <button class="close-read-modal" onclick="closeReadModal()">X</button>
+
+      <div class="read-book-name">name</div>
+       <span class="read-book-price">price</span>
+      <section class="rate-control">
+        <button class="increase-rate" onclick="increaseRate(this)">+</button>
+        <span class="rate"></span>
+        <button class="deacrease-rate" onclick="decreaseRate(this)">-</button>
+      </section>
+      <div>
+        <img class="read-book-img" src="imgs/danidin.jpg" alt="" />
+      </div>
+    </section>
+
+    <script src="Js/utils.js"></script>
+    <script src="Js/DB-services.js"></script>
+    <script src="Js/model-services.js"></script>
+    <script src="Js/controler.js"></script>
+  </body>
+</html>
